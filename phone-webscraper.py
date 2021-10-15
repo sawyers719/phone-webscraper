@@ -29,6 +29,16 @@ print("How many pages of posts would you like to search(each page has 120 posts)
 count = int(input())
 print(str(count * 120) + " posts will be searched.")
 
+#take input for how to output numbers
+while True:
+	print("How would you like to output found numbers? f = output to .txt file, t = list in terminal")
+	output = input("")
+	if output == "f" or output == "t":
+		break;
+	else:
+		print("Invalid input. Please enter one of the provided options.")
+		continue
+
 
 #search for that element
 browser.find_element_by_class_name(category).click();
@@ -86,7 +96,14 @@ for i in filtered2:
     if i not in f2:
         f2.append(i)
 
-print(str(len(f2)) + " numbers were found.")
-#print list
-for x in f2:
-	print(x)
+if output == "t":
+	print(str(len(f2)) + " numbers were found.")
+	#print list
+	for x in f2:
+		print(x)
+
+if output == "f":
+	file = open("numbers.txt", "w")
+	for x in f2:
+		file.write(x + "\n")
+	file.close()
