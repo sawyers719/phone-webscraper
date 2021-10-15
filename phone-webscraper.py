@@ -31,9 +31,9 @@ print(str(count * 120) + " posts will be searched.")
 
 #take input for how to output numbers
 while True:
-	print("How would you like to output found numbers? f = output to .txt file, t = list in terminal")
+	print("How would you like to output found numbers? f = output to .txt file, t = list in terminal, tf = both")
 	output = input("")
-	if output == "f" or output == "t":
+	if output == "f" or output == "t" or output == "tf":
 		break;
 	else:
 		print("Invalid input. Please enter one of the provided options.")
@@ -96,13 +96,13 @@ for i in filtered2:
     if i not in f2:
         f2.append(i)
 
-if output == "t":
+if output == "t" or output == "tf":
 	print(str(len(f2)) + " numbers were found.")
 	#print list
 	for x in f2:
 		print(x)
 
-if output == "f":
+if output == "f" or output == "tf":
 	file = open("numbers.txt", "w")
 	for x in f2:
 		file.write(x + "\n")
