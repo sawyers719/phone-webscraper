@@ -13,7 +13,7 @@ Program runs in terminal.
 - Enter how many pages of posts to be searched(each is 120)
 - Enter how you would like to output the found phone numbers
 Image of inputs:
-![Inputs](/images/web scraper input.png)
+![Inputs](phone-webscraper/images/web scraper input.png)
 
 
 If you get an error now, that might mean the category you chose does not have enough posts.
@@ -21,6 +21,6 @@ If you get an error now, that might mean the category you chose does not have en
 Program will run, speed depends on strength of your internet connection.
 Depending on what you chose previously, program will output list of phone numbers to file or terminal, or both.
 Image of outputs:
-![Outputs](/images/web scraper output.png)
+![Outputs](phone-webscraper/images/web scraper output.png)
 
 Just a cool, practical thing I made in my free time
